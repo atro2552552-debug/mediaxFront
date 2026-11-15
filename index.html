@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#5ba58d" />
+    <title>Media X</title>
+    <link rel="stylesheet" href="./src/assets/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="./src/css/fonts.css" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+  </head>
+  <body>
+    <main class="mobile splash">
+      <a class="splash-link" href="./src/welcome.html" aria-label="Continue to Media X">
+        <span class="splash-icon" aria-hidden="true"><i class="fa-solid fa-xmark"></i></span>
+      </a>
+      <p class="splash-name">MEDIA X</p>
+    </main>
+    <script>
+
+      setTimeout(()=>{
+
+          localStorage.getItem("if_login") ? window.location.href = "./src/home.html" : window.location.href = "./src/friends.html";
+
+      },2000);
+
+    </script>
+  </body>
+</html>

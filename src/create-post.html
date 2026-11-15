@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#3b987e" />
+    <title>Create New Post | Media X</title>
+    <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/create-post.css" />
+  </head>
+  <body>
+    <main class="create-page">
+      <header class="composer-header">
+        <a class="close-composer" href="./home.html" aria-label="Close"><i class="fa-solid fa-xmark"></i></a>
+        <h1>Create New Post</h1>
+        <a class="header-post" href="home.html"><i class="fa-solid fa-chevron-right"></i></a>
+      </header>
+
+      <section class="composer-body">
+        <article class="composer-card">
+          <div class="composer-user">
+            <img class="myAvatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiRo5RsazUIy3LPn-DG57NPTKgVyRcUqqJODFRmkEdbg&s=10" />
+            <span class="composer-name"></span>
+            <label class="audience-picker">
+              <select class="security" aria-label="Post audience">
+                <option>Public</option>
+                <option>Private</option>
+              </select>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </label>
+          </div>
+          <div class="post-editor">
+            <div class="post-highlight" aria-hidden="true"></div>
+            <textarea class="post-content" aria-label="Write your post" rows="5" spellcheck="false"></textarea>
+          </div>
+        </article>
+
+        <label class="media-picker" for="post-media">
+          <span class="media-icon"><i class="fa-regular fa-image" aria-hidden="true"></i></span>
+          <span>Add Photo or Video</span>
+          <i class="fa-solid fa-plus media-plus" aria-hidden="true"></i>
+        </label>
+        <input class="media-input" id="post-media" type="file" accept="image/*,video/*" />
+
+        <button class="post-button" id="post-button" type="button">Post</button>
+      </section>
+    </main>
+    <script type="module" src="./js/postEditor.js"></script>
+    <script type="module" src="./js/createPost.js"></script>
+  </body>
+</html>

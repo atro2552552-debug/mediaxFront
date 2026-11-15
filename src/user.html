@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#3b987e" />
+    <title>Profile | Media X</title>
+    <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/user.css" />
+  </head>
+  <body>
+    <main class="profile-page">
+      <header class="profile-topbar">
+        <a class="profile-back" href="./home.html">
+          <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+          <span>Back</span>
+        </a>
+        <a class="profile-settings" href="#settings" aria-label="Settings">
+          <i class="fa-solid fa-gear" aria-hidden="true"></i>
+        </a>
+      </header>
+
+      <section class="profile-scroll">
+        <section class="profile-summary" aria-label="Profile">
+          
+        </section>
+
+        <section class="profile-stats" aria-label="Profile statistics"></section>
+
+        <section class="profile-stories" aria-label="Stories"></section>
+
+        <section class="profile-gallery" aria-label="Posts"></section>
+      </section>
+
+      <div class="edit-modal" id="profile-edit-modal" hidden>
+        <button class="edit-backdrop" type="button" data-close-edit aria-label="Close edit profile"></button>
+        <section class="edit-dialog" role="dialog" aria-modal="true" aria-labelledby="edit-profile-title">
+          <header class="edit-dialog-header">
+            <h2 id="edit-profile-title">Edit Profile</h2>
+            <button class="edit-close" type="button" data-close-edit aria-label="Close">
+              <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+          </header>
+
+          <form class="edit-form" id="profile-edit-form">
+            <div class="edit-photo-row">
+              <img class="edit-avatar-preview" id="edit-avatar-preview" alt="Profile photo preview" />
+              <label class="edit-photo-button" for="edit-avatar">Change photo</label>
+              <input class="edit-file-input" id="edit-avatar" name="avatar" type="file" accept="image/*" />
+            </div>
+
+            <label class="edit-field">
+              <span>Full name</span>
+              <input id="edit-fullname" name="fullname" type="text" autocomplete="name" maxlength="60" required />
+            </label>
+
+            <label class="edit-field">
+              <span>Username</span>
+              <div class="edit-username-input">
+                <span>@</span>
+                <input id="edit-username" name="username" type="text" autocomplete="username" maxlength="30" required />
+              </div>
+            </label>
+
+            <p class="edit-message" id="edit-message" role="status" aria-live="polite"></p>
+
+            <div class="edit-form-actions">
+              <button class="edit-cancel" type="button" data-close-edit>Cancel</button>
+              <button class="edit-save" id="edit-save" type="submit">Save changes</button>
+            </div>
+          </form>
+        </section>
+      </div>
+
+      <nav class="bottom-nav" aria-label="Main navigation">
+        <a class="nav-item" href="./home.html" aria-label="Home">
+          <i class="fa-solid fa-house" aria-hidden="true"></i>
+        </a>
+        <a class="nav-item" href="./conversations.html" aria-label="Messages">
+          <i class="fa-regular fa-message" aria-hidden="true"></i>
+        </a>
+        <a class="nav-item" href="./search.html" aria-label="Search">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        </a>
+        <a class="nav-item profile-nav-active" href="./user.html" aria-label="Profile">
+          <i class="fa-regular fa-user" aria-hidden="true"></i>
+          <span>Profile</span>
+        </a>
+      </nav>
+    </main>
+    <script src="./js/user.js" type="module"></script>
+  </body>
+</html>

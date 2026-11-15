@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#3b987e" />
+    <title>Messages | Media X</title>
+    <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/conversations.css" />
+  </head>
+  <body>
+    <main class="conversations-page">
+      <header class="conversations-header">
+        <div>
+          <h1>Messages</h1>
+          <p>Your conversations</p>
+        </div>
+        <button class="new-message-button" id="new-message" type="button" aria-label="Start a conversation">
+          <i class="fa-solid fa-pen-to-square" aria-hidden="true"></i>
+        </button>
+      </header>
+
+      <section class="conversations-scroll">
+        <div class="conversation-list" id="conversation-list">
+          <div class="conversation-state">Loading messages...</div>
+        </div>
+      </section>
+
+      <div class="people-modal" id="people-modal" hidden>
+        <button class="people-backdrop" type="button" data-close-people aria-label="Close"></button>
+        <section class="people-panel" role="dialog" aria-modal="true" aria-labelledby="people-title">
+          <header class="people-header">
+            <h2 id="people-title">New message</h2>
+            <button class="people-close" type="button" data-close-people aria-label="Close">
+              <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+          </header>
+          <input class="people-search" id="people-search" type="search" placeholder="Search people" autocomplete="off" />
+          <div class="people-list" id="people-list"></div>
+        </section>
+      </div>
+
+      <nav class="bottom-nav" aria-label="Main navigation">
+        <a class="nav-item" href="./home.html" aria-label="Home">
+          <i class="fa-solid fa-house" aria-hidden="true"></i>
+        </a>
+        <a class="nav-item messages-nav-active" href="./conversations.html" aria-label="Messages">
+          <i class="fa-regular fa-message" aria-hidden="true"></i>
+          <span>Messages</span>
+        </a>
+        <a class="nav-item" href="./search.html" aria-label="Search">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        </a>
+        <a class="nav-item" href="./user.html" aria-label="Profile">
+          <i class="fa-regular fa-user" aria-hidden="true"></i>
+        </a>
+      </nav>
+    </main>
+    <script src="./js/conversations.js" type="module"></script>
+  </body>
+</html>

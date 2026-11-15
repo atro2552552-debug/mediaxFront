@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#3b987e" />
+    <title>Home | Media X</title>
+    <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+  </head>
+  <body>
+    <main class="home-page">
+      <header class="feed-header">
+        <a class="feed-logo" href="./home.html">Media X</a>
+        <div class="header-actions">
+          <a class="header-icon" href="./create-post.html" aria-label="Create post"><i class="fa-solid fa-plus"></i></a>
+          <button class="header-icon notification" type="button" aria-label="Notifications"><i class="fa-regular fa-bell"></i><span></span></button>
+        </div>
+      </header>
+
+      <section class="stories" aria-label="Stories">
+        <div class="story">
+          <span class="story-image"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiRo5RsazUIy3LPn-DG57NPTKgVyRcUqqJODFRmkEdbg&s=10" class="avatarMy"/><span class="add-story"><a href="./create-post.html"><i class="fa-solid fa-plus"></i></a></span></span>
+          <span class="story-name">You</span>
+        </div>
+
+      </section>
+
+      <section class="feed-scroll" aria-label="Posts"></section>
+
+      <nav class="bottom-nav" aria-label="Main navigation">
+        <a class="nav-item active" href="./home.html" aria-label="Home"><i class="fa-solid fa-house"></i><span>Home</span></a>
+        <a class="nav-item" href="./conversations.html" aria-label="Messages"><i class="fa-regular fa-message"></i></a>
+        <a class="nav-item" href="./search.html" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a class="nav-item" href="user.html" aria-label="Profile"><i class="fa-regular fa-user"></i></a>
+      </nav>
+    </main>
+    <script type="module" src="./js/home.js"></script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#3b987e" />
+    <title>Conversation | Media X</title>
+    <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/conversation.css" />
+  </head>
+  <body>
+    <main class="conversation-page">
+      <header class="conversation-header">
+        <a class="conversation-back" href="./conversations.html" aria-label="Back to messages">
+          <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+        </a>
+        <img class="conversation-avatar" id="conversation-avatar" alt="" />
+        <div class="conversation-person">
+          <h1 id="conversation-name">Conversation</h1>
+          <p id="conversation-status">Messages</p>
+        </div>
+      </header>
+
+      <section class="conversation-messages" id="conversation-messages" aria-live="polite">
+        <div class="conversation-state">Loading messages...</div>
+      </section>
+
+      <footer class="conversation-compose">
+        <div class="reply-preview" id="reply-preview" hidden>
+          <div>
+            <strong id="reply-name"></strong>
+            <span id="reply-text"></span>
+          </div>
+          <button id="cancel-reply" type="button" aria-label="Cancel reply">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <div class="emoji-picker" id="emoji-picker" hidden>
+          <button type="button" data-emoji="😀">😀</button>
+          <button type="button" data-emoji="😂">😂</button>
+          <button type="button" data-emoji="🥰">🥰</button>
+          <button type="button" data-emoji="😍">😍</button>
+          <button type="button" data-emoji="👍">👍</button>
+          <button type="button" data-emoji="❤️">❤️</button>
+          <button type="button" data-emoji="🎉">🎉</button>
+          <button type="button" data-emoji="🙏">🙏</button>
+        </div>
+
+        <form class="message-form" id="message-form">
+          <button class="emoji-toggle" id="emoji-toggle" type="button" aria-label="Add emoji">
+            <i class="fa-regular fa-face-smile" aria-hidden="true"></i>
+          </button>
+          <input id="message-input" type="text" placeholder="Write a message..." maxlength="3000" autocomplete="off" />
+          <button class="send-message" type="submit" aria-label="Send message">
+            <i class="fa-regular fa-paper-plane" aria-hidden="true"></i>
+          </button>
+        </form>
+        <p class="conversation-error" id="conversation-error" role="status"></p>
+      </footer>
+    </main>
+    <script src="./js/conversation.js" type="module"></script>
+  </body>
+</html>
